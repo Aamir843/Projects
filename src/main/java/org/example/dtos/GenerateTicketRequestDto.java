@@ -1,6 +1,6 @@
 package org.example.dtos;
 
-import org.example.models.VehicleType;
+import org.example.enums.VehicleType;
 
 public class GenerateTicketRequestDto {
 

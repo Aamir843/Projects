@@ -1,6 +1,6 @@
 package org.example.dtos;
 
-import org.example.models.ResponseStatus;
+import org.example.enums.ResponseStatus;
 import org.example.models.Ticket;
 
 public class GenerateTicketResponseDto {

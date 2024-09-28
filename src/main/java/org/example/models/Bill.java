@@ -1,5 +1,7 @@
 package org.example.models;
 
+import org.example.enums.BillStatus;
+
 import java.time.Instant;
 import java.util.List;
 

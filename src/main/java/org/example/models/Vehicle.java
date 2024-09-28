@@ -1,5 +1,7 @@
 package org.example.models;
 
+import org.example.enums.VehicleType;
+
 public class Vehicle extends BaseEntity{
     private VehicleType vehicleType;
 

@@ -1,5 +1,8 @@
 package org.example.models;
 
+import org.example.enums.ParkingSpotStatus;
+import org.example.enums.VehicleType;
+
 import java.util.List;
 
 public class ParkingSpot extends BaseEntity {

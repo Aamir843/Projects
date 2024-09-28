@@ -1,5 +1,7 @@
 package org.example.models;
 
+import org.example.enums.GateType;
+
 public class Gate extends BaseEntity{
     private GateType gateType;
 

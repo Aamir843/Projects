@@ -2,13 +2,14 @@ package org.example.controllers;
 
 import org.example.dtos.GenerateTicketRequestDto;
 import org.example.dtos.GenerateTicketResponseDto;
-import org.example.models.ResponseStatus;
+import org.example.exceptions.NoParkingSpotFoundException;
+import org.example.enums.ResponseStatus;
 import org.example.models.Ticket;
 import org.example.services.TicketService;
 
 public class TicketController {
 
-    private TicketService ticketService;
+    private final TicketService ticketService;
 
     public TicketController(TicketService ticketService) {
         this.ticketService = ticketService;
@@ -24,8 +25,8 @@ public class TicketController {
 
             generateTicketResponseDto.setTicket(ticket);
             generateTicketResponseDto.setResponseStatus(ResponseStatus.SUCCESS);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        } catch (NoParkingSpotFoundException e) {
+            generateTicketResponseDto.setResponseStatus(ResponseStatus.FAILURE);
         }
         return generateTicketResponseDto;
     }
