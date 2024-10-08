@@ -22,6 +22,7 @@ public class RandomSpotAssignmentStrategy implements SpotAssignmentStrategy {
     @Override
     public ParkingSpot assignSpot(VehicleType vehicleType, Gate gate) {
         ParkingLot parkingLot = parkingLotService.getParkingLotForGate(gate);
+
         List<ParkingSpot> parkingSpots = parkingSpotService.getParkingSpotsByLot(parkingLot);
 
         for(ParkingSpot parkingSpot: parkingSpots){
